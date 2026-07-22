@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-brand-50 text-slate-800 antialiased;
+  background-image: radial-gradient(
+      120% 90% at 50% -10%,
+      #ffffff 0%,
+      #fdf2f6 45%,
+      #fbe8f0 100%
+    );
+  background-attachment: fixed;
+}
+
+/* Subtle rise-in for verdict content. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.35s ease-out both;
+}
+
+/* Hide scrollbars on the horizontal stage selector. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
